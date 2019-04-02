@@ -61,7 +61,7 @@ public class CursoDAO implements ICursoDAO {
 	}
 
 	@Override
-	public Curso recuperarCurso (Long cursoId) {
+	public Curso recuperarCursoPorId (int cursoId) {
 
 		Curso curso = new Curso();
 
@@ -102,7 +102,7 @@ public class CursoDAO implements ICursoDAO {
 	}
 
 	@Override
-	public String borrarCurso(Long cursoId) {
+	public String borrarCurso(int cursoId) {
 		String result;
 		
 		try {

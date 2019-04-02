@@ -8,7 +8,7 @@ public interface ICursoDAO {
 
 	  List<Curso> recuperaCursos();
 	  String crearCurso(Curso curso);
-	  Curso recuperarCurso(Long cursoId);
+	  Curso recuperarCursoPorId(int cursoId);
 	  String actualizarCurso(Curso curso);
-	  String borrarCurso(Long cursoId);
+	  String borrarCurso(int cursoId);
 }

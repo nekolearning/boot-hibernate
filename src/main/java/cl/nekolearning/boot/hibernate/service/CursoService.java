@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
 import cl.nekolearning.boot.hibernate.dao.ICursoDAO;
 import cl.nekolearning.boot.hibernate.entity.Curso;
 
-@Service
+@Service("curso")
 public class CursoService implements ICursoService {
 	
 	@Autowired
@@ -18,6 +18,12 @@ public class CursoService implements ICursoService {
 	public List<Curso> recuperarCursos() {
 		
 		return cursoDAO.recuperaCursos();
+	}
+	
+	@Override
+	public Curso recuperarCursoPorId(int cursoId) {
+		
+		return cursoDAO.recuperarCursoPorId(cursoId);
 	}
 
 }
