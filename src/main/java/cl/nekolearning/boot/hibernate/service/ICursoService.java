@@ -6,7 +6,10 @@ import cl.nekolearning.boot.hibernate.entity.Curso;
 
 public interface ICursoService {
 	
-	List<Curso> recuperarCursos();
-	Curso recuperarCursoPorId(int cursoId);
+	  List<Curso> recuperarCursos();
+	  String crearCurso(Curso curso);
+	  Curso recuperarCursoPorId(int cursoId);
+	  String actualizarCurso(Curso curso);
+	  String borrarCurso(int cursoId);
 
 }

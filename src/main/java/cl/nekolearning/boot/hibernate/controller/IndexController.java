@@ -11,27 +11,25 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import cl.nekolearning.boot.hibernate.entity.Curso;
 import cl.nekolearning.boot.hibernate.service.ICursoService;
 
-
 @Controller
 public class IndexController {
-	
+
 	@Autowired
 	@Qualifier("curso")
 	private ICursoService cursoService;
-	
-	@GetMapping("/recuperaCursos")
-    public @ResponseBody List<Curso> recuperaCursos() {
-	
-		List<Curso> cursos= cursoService.recuperarCursos();
-        return cursos;
-    }
-	
-	@GetMapping("/recuperarCursoPorId")
-    public @ResponseBody Curso recuperarCursoPorId() {
-	
-		Curso curso = cursoService.recuperarCursoPorId(1);
-        return curso;
-    }
 
+	@GetMapping("/recuperaCursos")
+	public @ResponseBody List<Curso> recuperaCursos() {
+
+		List<Curso> cursos = cursoService.recuperarCursos();
+		return cursos;
+	}
+
+	@GetMapping("/recuperarCursoPorId")
+	public @ResponseBody Curso recuperarCursoPorId() {
+
+		Curso curso = cursoService.recuperarCursoPorId(1);
+		return curso;
+	}
 
 }

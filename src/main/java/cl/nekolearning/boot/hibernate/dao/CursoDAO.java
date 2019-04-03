@@ -19,7 +19,7 @@ public class CursoDAO implements ICursoDAO {
 
 	@SuppressWarnings("unchecked")
 	@Override
-	public List<Curso> recuperaCursos() {
+	public List<Curso> recuperarCursos() {
 
 		List<Curso> result = new ArrayList<Curso>();
 

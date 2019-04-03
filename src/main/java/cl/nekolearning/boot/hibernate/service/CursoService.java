@@ -16,14 +16,32 @@ public class CursoService implements ICursoService {
 
 	@Override
 	public List<Curso> recuperarCursos() {
-		
-		return cursoDAO.recuperaCursos();
+		//Tu logica de negocio aqui
+		return cursoDAO.recuperarCursos();
+	}
+	
+	@Override
+	public String crearCurso(Curso curso) {
+		//Tu logica de negocio aqui
+		return cursoDAO.crearCurso(curso);
 	}
 	
 	@Override
 	public Curso recuperarCursoPorId(int cursoId) {
-		
+		//Tu logica de negocio aqui
 		return cursoDAO.recuperarCursoPorId(cursoId);
+	}
+
+	@Override
+	public String borrarCurso(int cursoId) {
+		//Tu logica de negocio aqui
+		return cursoDAO.borrarCurso(cursoId);
+	}
+
+	@Override
+	public String actualizarCurso(Curso curso) {
+		//Tu logica de negocio aqui
+		return cursoDAO.actualizarCurso(curso);
 	}
 
 }
